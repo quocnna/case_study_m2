@@ -9,6 +9,11 @@ public class CommonUtil {
 
     public static int getChoice(){
         System.out.print("Enter your choice: ");
-        return CommonUtil.getScanner().nextInt();
+        return Integer.parseInt(CommonUtil.getScanner().nextLine());
+    }
+
+    public static String inputTo(String field){
+        System.out.print(field+ ": ");
+        return getScanner().nextLine();
     }
 }
