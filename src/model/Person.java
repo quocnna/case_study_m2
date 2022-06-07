@@ -14,6 +14,15 @@ public class Person {
     public Person() {
     }
 
+    public Person(String fullName, String birthday, Gender gender, String phone, String email, String address) {
+        this.fullName = fullName;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+    }
+
     public Person(String code, String fullName, String birthday, Gender gender, String phone, String email, String address) {
         this.code = code;
         this.fullName = fullName;

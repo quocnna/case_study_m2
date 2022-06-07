@@ -18,7 +18,7 @@ public interface ConstantUtil {
     enum TypeCustomer{
         DIAMOND,
         PLATINIUM,
-        GOLC,
+        GOLD,
         SILVER,
         MEMBER
     }
