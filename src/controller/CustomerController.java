@@ -9,12 +9,12 @@ import java.util.List;
 public class CustomerController {
     private CustomerService customerService = new CustomerServiceImpl();
 
-    public void create(Customer e) {
-        customerService.create(e);
+    public void create(Customer customer) {
+        customerService.create(customer);
     }
 
-    public void update(Customer e) {
-        customerService.update(e);
+    public void update(Customer customer) {
+        customerService.update(customer);
     }
 
     public List<Customer> findAll() {

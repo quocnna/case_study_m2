@@ -1,4 +1,7 @@
 package service;
 
-public interface BookingService {
+import model.Booking;
+
+public interface BookingService extends BaseService<Booking>{
+
 }

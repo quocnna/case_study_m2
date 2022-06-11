@@ -1,5 +1,6 @@
 package util;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class CommonUtil {
@@ -15,5 +16,9 @@ public class CommonUtil {
     public static String inputTo(String field){
         System.out.print(field+ ": ");
         return getScanner().nextLine();
+    }
+
+    public static DateTimeFormatter getDateFormat() {
+        return DateTimeFormatter.ofPattern("dd/MM/yyyy");
     }
 }

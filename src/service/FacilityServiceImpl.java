@@ -7,19 +7,16 @@ import model.Villa;
 import util.ConstantUtil.RentType;
 import util.ConstantUtil.RoomType;
 
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class FacilityServiceImpl implements FacilityService {
     private static Map<Facility, Integer> facilitys = new LinkedHashMap<>();
 
     static {
-        House house = new House("HOU01", "Sweet House", 5, 55555, 5, RentType.MONTH, RoomType.STANDARD, 3);
+        House house = new House("HOU1", "Sweet House", 5, 55555, 5, RentType.MONTH, RoomType.STANDARD, 3);
         Room room = new Room("ROM1", "Single Room", 20, 20, 1, RentType.DAY, "massage");
-        Villa villa = new Villa("VIL01", "Aston Villa", 12, 123, 10, RentType.MONTH, RoomType.DELUXE, 234, 3);
-        Villa villa2 = new Villa("VIL02", "Aston Villa", 12, 123, 10, RentType.MONTH, RoomType.DELUXE, 234, 3);
+        Villa villa = new Villa("VIL1", "Aston Villa", 12, 123, 10, RentType.MONTH, RoomType.DELUXE, 234, 3);
+        Villa villa2 = new Villa("VIL2", "Aston Villa", 12, 123, 10, RentType.MONTH, RoomType.DELUXE, 234, 3);
 
         facilitys.put(house, 0);
         facilitys.put(room, 0);
@@ -56,5 +53,10 @@ public class FacilityServiceImpl implements FacilityService {
     @Override
     public Map<Facility, Integer> findAllMaintenance() {
         return facilitys;
+    }
+
+    @Override
+    public Optional<Facility> get(String code) {
+        return findAll().stream().filter(e -> e.getCode().equals(code)).findAny();
     }
 }
