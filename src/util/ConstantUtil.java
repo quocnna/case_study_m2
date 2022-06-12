@@ -17,7 +17,7 @@ public interface ConstantUtil {
 
     enum TypeCustomer{
         DIAMOND,
-        PLATINIUM,
+        PLATINUM,
         GOLD,
         SILVER,
         MEMBER
@@ -26,9 +26,9 @@ public interface ConstantUtil {
     enum Degree{
         INTERMEDIATE,
         ASSOCIATE,
-        BACHERLOR,
+        BACHELOR,
         MASTER,
-        DOCTER,
+        DOCTOR,
         PROFESSOR
     }
 
@@ -47,6 +47,12 @@ public interface ConstantUtil {
     enum Gender{
         MALE,
         FEMALE,
-        UNKNOW
+        UNKNOWN
+    }
+
+    interface PROMOTION{
+        Integer TEN_PERCENT = 10;
+        Integer TWENTY_PERCENT = 20;
+        Integer FIFTY_PERCENT = 50;
     }
 }

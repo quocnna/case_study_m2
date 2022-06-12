@@ -8,7 +8,7 @@ public class HomeView {
     }
 
     public static void displayHomeMenu() {
-        BookingView.show();
+        PromotionView.show();
         backToHomeMenu();
     }
 //        System.out.println("----- Welcome to Furama Resort -----\n" +

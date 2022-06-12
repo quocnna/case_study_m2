@@ -8,6 +8,7 @@ import util.ConstantUtil.RentType;
 import util.ConstantUtil.RoomType;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class FacilityServiceImpl implements FacilityService {
     private static Map<Facility, Integer> facilitys = new LinkedHashMap<>();
@@ -47,7 +48,7 @@ public class FacilityServiceImpl implements FacilityService {
 
     @Override
     public List<Facility> findAll() {
-        return facilitys.keySet().stream().toList();
+        return facilitys.keySet().stream().collect(Collectors.toList());
     }
 
     @Override
